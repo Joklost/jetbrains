@@ -1,0 +1,37 @@
+<templateSet group="C/C++">
+  <template name="ifdefcpp" value="#ifdef __cplusplus&#10;$CODE$&#10;#endif /* __cplusplus */" description="#ifdef __cplusplus" toReformat="false" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="c" value="true" />
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="ifdefcppelse" value="#ifdef __cplusplus&#10;$CODE$&#10;#else&#10;$ELSE_CODE$&#10;#endif /* __cplusplus */" description="#ifdef __cplusplus #else" toReformat="false" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ELSE_CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="c" value="true" />
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="cout" value="std::cout &lt;&lt; $OUT$ &lt;&lt; std::endl;" description="cout" toReformat="false" toShortenFQNames="true">
+    <variable name="OUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+  <template name="for" value="for (auto $INDEX$ = 0; $COPY_INDEX$ &lt; $UPPER_BOUND$; ++$COPY_INDEX$) {&#10;  $END$&#10;}" description="Indexed for(;;) loop" toReformat="true" toShortenFQNames="true">
+    <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
+    <variable name="COPY_INDEX" expression="INDEX" defaultValue="" alwaysStopAt="false" />
+    <variable name="UPPER_BOUND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="vv" value="$NAME$[$I1$][$I2$]" description="vecvec subscripting" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="I1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="I2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="cpp" value="true" />
+    </context>
+  </template>
+</templateSet>
