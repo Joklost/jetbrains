@@ -24,6 +24,7 @@
     <variable name="INDEX" expression="suggestIndexName()" defaultValue="" alwaysStopAt="true" />
     <variable name="COPY_INDEX" expression="INDEX" defaultValue="" alwaysStopAt="false" />
     <variable name="UPPER_BOUND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
   </template>
   <template name="vv" value="$NAME$[$I1$][$I2$]" description="vecvec subscripting" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
